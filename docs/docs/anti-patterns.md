@@ -116,7 +116,7 @@ You might have to use a deferred object when wrapping a callback API that doesn'
 function delay(ms) {
     var deferred = Promise.defer(); // warning, defer is deprecated, use the promise constructor
     setTimeout(function(){
-        deferred.fulfill();
+        deferred.resolve();
     }, ms);
     return deferred.promise;
 }
